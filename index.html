@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick="corrida()">Dar a largada</button>
     <div id="div_out"></div>
 </body>
+
 </html>
 <script>
-    var tempo1= 0
+    var tempo1 = 0
     var tempo2 = 0
     var tempo3 = 0
 
     var cavalos = [{
-        Cavalo1 : [{}],
-        Cavalo2 : [{}],
-        Cavalo3 : [{}]
+        Cavalo1: [{}],
+        Cavalo2: [{}],
+        Cavalo3: [{}]
     }]
+    i1 = 1
+    i2 = 1
+    i3 = 1
+
     function corrida() {
-        for (i = 1; i <= 7; i++) {
-            tempo1 = 7 + Math.Random() * 9
-            div_out.innerHTML += `Volta ${i} Cavalo01 – ${tempo1} – ${tempo1+tempo1} - <br>`
-            cavalos.pus
-        } 
-        for (i = 1; i <= 7; i++) {
-           tempo2 = 7 + Math.Random() * 9
-           div_out.innerHTML += `Volta ${i} Cavalo02 – ${tempo2} – ${tempo2+tempo2} ` 
-        } 
-        
-        for (i = 1; i <= 7; i++) {
-            tempo3 = 7 + Math.Random() * 9
-            div_out.innerHTML += `Volta ${i} Cavalo03 – ${tempo3} – ${tempo3+tempo3} - <br>` 
-        } 
+        for (var i = 0; i <= 7; i++) {
+            tempo1 = 7 + (Math.random()  * 9)
+            tempo2 = 7 + (Math.random() * 9)
+            tempo3 = 7 + (Math.random() * 9)
+            div_out.innerHTML += `<br> Volta ${i} Cavalo01 – ${tempo1} – ${tempo1 + tempo1} -  Volta ${i} Cavalo02 – ${tempo2} – ${tempo2 + tempo2} Volta ${i} Cavalo03 – ${tempo3} – ${tempo3 + tempo3} - <br>`
+        }
     }
+
+
 </script>

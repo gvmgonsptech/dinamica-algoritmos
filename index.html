@@ -16,19 +16,25 @@
     var tempo2 = 0
     var tempo3 = 0
 
+    var cavalos = [{
+        Cavalo1 : [{}],
+        Cavalo2 : [{}],
+        Cavalo3 : [{}]
+    }]
     function corrida() {
         for (i = 1; i <= 7; i++) {
-            var tempo1 = 7 + Math.Random() * 9
-            div_out.innerHTML += `Volta ${i} Cavalo01 – ${tempo1} – ${tempo1+tempo1} - <br>` 
+            tempo1 = 7 + Math.Random() * 9
+            div_out.innerHTML += `Volta ${i} Cavalo01 – ${tempo1} – ${tempo1+tempo1} - <br>`
+            cavalos.pus
         } 
         for (i = 1; i <= 7; i++) {
-        var tempo2 = 7 + Math.Random() * 9
+           tempo2 = 7 + Math.Random() * 9
            div_out.innerHTML += `Volta ${i} Cavalo02 – ${tempo2} – ${tempo2+tempo2} ` 
         } 
         
         for (i = 1; i <= 7; i++) {
-            var tempo3 = 7 + Math.Random() * 9
-            div_out.innerHTML += `Volta ${i} Cavalo03 – ${tempo1} –  - <br>` 
+            tempo3 = 7 + Math.Random() * 9
+            div_out.innerHTML += `Volta ${i} Cavalo03 – ${tempo3} – ${tempo3+tempo3} - <br>` 
         } 
     }
 </script>

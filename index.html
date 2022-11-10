@@ -12,12 +12,23 @@
 </body>
 </html>
 <script>
-    var tempo = 0
+    var tempo1= 0
+    var tempo2 = 0
+    var tempo3 = 0
 
     function corrida() {
         for (i = 1; i <= 7; i++) {
-            var tempo = 7 + Math.Random() * 9
-        } div_out.innerHTML += `Volta ${i}<br> Cavalo01 – x,xx – yy,yy – Cavalo02 – x,xx – yy,yy - Cavalo03 – x,xx – yy,yy` 
-            
+            var tempo1 = 7 + Math.Random() * 9
+            div_out.innerHTML += `Volta ${i} Cavalo01 – ${tempo1} – ${tempo1+tempo1} - <br>` 
+        } 
+        for (i = 1; i <= 7; i++) {
+        var tempo2 = 7 + Math.Random() * 9
+           div_out.innerHTML += `Volta ${i} Cavalo02 – ${tempo2} – ${tempo2+tempo2} ` 
+        } 
+        
+        for (i = 1; i <= 7; i++) {
+            var tempo3 = 7 + Math.Random() * 9
+            div_out.innerHTML += `Volta ${i} Cavalo03 – ${tempo1} –  - <br>` 
+        } 
     }
 </script>

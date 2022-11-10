@@ -28,12 +28,16 @@
     i2 = 1
     i3 = 1
 
+    var soma1 
+    var soma2
+    var soma3 
+
     function corrida() {
-        for (var i = 0; i <= 7; i++) {
-            tempo1 = 7 + (Math.random()  * 9)
-            tempo2 = 7 + (Math.random() * 9)
-            tempo3 = 7 + (Math.random() * 9)
-            div_out.innerHTML += `<br> Volta ${i} Cavalo01 – ${tempo1} – ${tempo1 + tempo1} -  Volta ${i} Cavalo02 – ${tempo2} – ${tempo2 + tempo2} Volta ${i} Cavalo03 – ${tempo3} – ${tempo3 + tempo3} - <br>`
+        for (var i = 1; i <= 7; i++) {
+            tempo1 = 7 + Math.random() * 2
+            tempo2 = 7 + Math.random() * 2
+            tempo3 = 7 + Math.random() * 2
+            div_out.innerHTML += `<br> Volta ${i} Cavalo01 – ${tempo1.toFixed(2)} – ${soma1.toFixed(2)} -  Volta ${i} Cavalo02 – ${tempo2.toFixed(2)} – ${soma2.toFixed(2)} Volta ${i} Cavalo03 – ${tempo3.toFixed(2)} – ${soma3.toFixed(2)} - <br>`
         }
     }
 

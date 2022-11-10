@@ -12,7 +12,9 @@
     Cavalo1: <input type="text" id="in_cavalo1">   <br><br> 
     Cavalo2: <input type="text" id="in_cavalo2">   <br><br> 
     Cavalo3 <input type="text" id="in_cavalo3">   <br><br> 
-
+    Informe a quantidade de voltas <input type="text" id="in_voltas" placeholder="Digite a quantidade"> <br>
+    Informe Tempo mín <input type="text" id="in_min">   <br><br> 
+    Informe Tempo máx <input type="text" id="in_max">   <br><br> 
     <button onclick="corrida()">Dar a largada</button>
     <div id="div_out"></div>
 </body>
@@ -23,6 +25,8 @@
     var tempo2 = 0
     var tempo3 = 0
 
+    
+
     var cavalos = [{
         Cavalo1: [{}],
         Cavalo2: [{}],
@@ -32,16 +36,19 @@
     i2 = 1
     i3 = 1
 
+    
     var soma1 
     var soma2
     var soma3 
 
     function corrida() {
+        var voltas = Number (in_voltas.value)
         var cavalo1 = in_cavalo1.value
         var cavalo2 = in_cavalo2.value
         var cavalo3 = in_cavalo3.value
+        
 
-        for (var i = 1; i <= 7; i++) {
+        for (var i = 1; i <= voltas; i++) {
             tempo1 = 7 + Math.random() * 2
             tempo2 = 7 + Math.random() * 2
             tempo3 = 7 + Math.random() * 2
@@ -59,11 +66,11 @@
         }
     
         if(soma1<soma2&&soma1<soma3){
-            div_out.innerHTML+='<br>Vencedor cavalo 1'
+            div_out.innerHTML+=`<br>Vencedor ${cavalo1}`
         } else  if(soma2<soma1&&soma2<soma3){
-            div_out.innerHTML+='<br>Vencedor cavalo 2'
+            div_out.innerHTML+=`<br>Vencedor ${cavalo1}`
         } else if (soma3<soma1&&soma3<soma2){
-            div_out.innerHTML+='<br>Vencedor cavalo 3'
+            div_out.innerHTML+=`<br>Vencedor ${cavalo1}`
         }
     }
       

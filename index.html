@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    Cavalo1: <input type="text" id="in_cavalo1">   <br><br> 
+    Cavalo2: <input type="text" id="in_cavalo2">   <br><br> 
+    Cavalo3 <input type="text" id="in_cavalo3">   <br><br> 
+
     <button onclick="corrida()">Dar a largada</button>
     <div id="div_out"></div>
 </body>
@@ -33,6 +37,10 @@
     var soma3 
 
     function corrida() {
+        var cavalo1 = in_cavalo1.value
+        var cavalo2 = in_cavalo2.value
+        var cavalo3 = in_cavalo3.value
+
         for (var i = 1; i <= 7; i++) {
             tempo1 = 7 + Math.random() * 2
             tempo2 = 7 + Math.random() * 2
@@ -44,9 +52,9 @@
             soma3 = tempo3 + tempo3
             
             if (i == 0) {
-                div_out.innerHTML += `<br> Volta ${i} Cavalo01 – ${tempo1.toFixed(2)} – ${tempo1.toFixed(2)} -  Volta ${i} Cavalo02 – ${tempo2.toFixed(2)} – ${tempo2.toFixed(2)} Volta ${i} Cavalo03 – ${tempo3.toFixed(2)} – ${tempo3.toFixed(2)} - <br>`
+                div_out.innerHTML += `<br> Volta ${i} ${cavalo1} – ${tempo1.toFixed(2)} – ${tempo1.toFixed(2)} -  Volta ${i} ${cavalo2} – ${tempo2.toFixed(2)} – ${tempo2.toFixed(2)} Volta ${i} ${cavalo3} – ${tempo3.toFixed(2)} – ${tempo3.toFixed(2)} - <br>`
             } else {
-                div_out.innerHTML += `<br> Volta ${i} Cavalo01 – ${tempo1.toFixed(2)} – ${soma1.toFixed(2)} -  Volta ${i} Cavalo02 – ${tempo2.toFixed(2)} – ${soma2.toFixed(2)} Volta ${i} Cavalo03 – ${tempo3.toFixed(2)} – ${soma3.toFixed(2)} - <br>`
+                div_out.innerHTML += `<br> Volta ${i} ${cavalo1} – ${tempo1.toFixed(2)} – ${soma1.toFixed(2)} -  Volta ${i} ${cavalo2} – ${tempo2.toFixed(2)} – ${soma2.toFixed(2)} Volta ${i} ${cavalo3} – ${tempo3.toFixed(2)} – ${soma3.toFixed(2)} - <br>`
             }
         }
     
